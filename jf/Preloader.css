@@ -1,0 +1,26 @@
+.preload {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -42px 0 0 -12px;
+  background: #0E2F44; /*Navy Blue*/
+  transform: rotate(45deg);
+  animation: spin 1s infinite linear;
+}
+@keyframes spin {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+
+#white{
+   opacity:1;
+    background-color:white;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}

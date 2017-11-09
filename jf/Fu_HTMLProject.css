@@ -1,0 +1,291 @@
+body {
+  font-family: "Montserrat";
+}
+
+.button {
+    position: relative;
+    margin:auto;
+    display: block;
+    background-color: #0E2F44; /*Navy Blue*/
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sayhi {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  color: black;
+  text-decoration: none;
+}
+
+.hi {
+  font-weight: 900;
+  font-family:"Montserrat";
+  font-size: 30px;
+  background-color: #0E2F44; /*Navy Blue*/;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+.lessbold {
+  font-weight: 400;
+  font-size: 24px;
+  padding: 10px;
+  position: relative;
+  margin: auto;
+}
+
+.bar {
+  background-color: #f2f2f1; /*light grey*/
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  }
+ 
+ h5 {
+  font-weight: 700;
+  text-transform: none;
+  font-size: 15px;
+  color: black;
+  margin: 0 0 20px 0;
+}
+
+.bar-inner {
+  background-color: #0E2F44; /*Navy Blue*/
+  width: 0%;
+  height: 100%;
+  position: relative;
+  transition: width 2000ms linear;
+}
+
+.bar-inner:after {
+  position: absolute;
+  right: 2.5%;
+  content: attr(data-percent);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+
+.padding {
+  padding-left:5em;
+}
+
+.pad {
+  padding: 0px;
+  margin: 10px;
+}
+
+.jamesfu {
+  font-size: 45px;
+  font-family: "Montserrat";
+  font-weight: 900;
+  text-align: center;
+  padding: 20px 30px;
+}
+
+.fonttitle {
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 15px 0px;
+}
+
+.back {
+   background-color: #0E2F44; /*Navy Blue*/
+   margin: 0;
+   padding:30px;
+   text-align: center;
+   color: white;
+   font-size: 25px;
+}
+
+.backtwo {
+  background-color: #0E2F44; /*Navy Blue*/
+  margin: 0;
+  padding: 0;
+}
+
+.contactform {
+  text-align: left;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.map {
+  padding-bottom: 20px;
+}
+
+.keyboardpad {
+  margin: 0;
+  padding: 0;
+}
+
+.aligner {
+  margin-left: 3cm;
+}
+
+.bargraph {
+  margin-left: 3px;
+}
+
+.sanfranpad {
+  margin: 0px;
+  padding: 15px;
+  padding-right: 0px;
+  padding-left: 15px;
+  padding-bottom: 0px;
+  background-color: white;
+  font-size: 30px;
+}
+
+.whiteback {
+  background-color: white;
+}
+
+.biggertext {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0E2F44; /*Navy Blue*/
+}
+
+img {
+  max-width:100%
+}
+
+iframe {
+  max-width:100%
+}
+
+header {
+  max-width: 100%;
+}
+
+.padder {
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-weight: 700;
+  max-width: 100%;
+}
+
+h4 {
+  font-weight: 900;
+  max-width: 100%;
+}
+
+.fontcolor {
+  color: black;
+}
+
+col-md-8 {
+  margin-bottom: 30px;
+}
+
+jumbotron {
+  max-width: 100%;
+}
+
+.pudding {
+  margin-bottom: 300px;
+}
+
+.main {
+  padding-bottom: 30px;
+}
+
+footer {
+  padding-bottom: 30px;
+}
+
+
+/*contact form*/
+#contact {
+  width:100%; height:100%; margin 0 auto;  
+}
+
+.contain {
+  width:960px; 
+  padding: 30px;
+  text-align: left;
+}
+
+#contact .contain form input,
+#contact .contain form textarea {
+	width:97.4%;
+	height:30px;
+	padding:5px 10px;
+	font-size: 12px;
+	letter-spacing:1px;
+	max-width:100%;
+	border:2px solid #FFF;
+	margin-bottom:25px;
+  -webkit-transition:all .1s ease-in-out;
+	-moz-transition:all .1s ease-in-out;
+	-ms-transition:all .1s ease-in-out;
+	-o-transition:all .1s ease-in-out;
+	transition:all .1s ease-in-out;
+  max-width:100%;
+}
+
+/*php form - php webserver not working as of now*/
+#contact .contain form input:focus,
+#contact .contain form textarea:focus {
+	border:2px solid #0E2F44; /*Navy Blue*/
+	max-width:100%;
+	}
+
+#contact .contain form textarea {
+	height:150px;
+  max-width:100%;
+}
+
+#contact .contain form .submit {
+	width:100%;
+	padding:5px 10px;
+	max-width:100%;
+	font-size: 12px;
+	letter-spacing:1px;
+	background:#0E2F44; /*Navy Blue*/
+	height:40px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	color:#FFF;
+	border:2px solid #0E2F44; /*Navy Blue*/
+  -webkit-transition:all .1s ease-in-out;
+	-moz-transition:all .1s ease-in-out;
+	-ms-transition:all .1s ease-in-out;
+	-o-transition:all .1s ease-in-out;
+	transition:all .1s ease-in-out;
+}
+
+#contact .contain form .submit:hover {
+	color:#FFF;
+	border:2px solid #0E2F44; /*Navy Blue*/
+	background: #0E2F44; /*Navy Blue*/
+	cursor:pointer;
+  max-width:100%;
+}
+
+#contact .contain form .required {
+	color:#0E2F44; /*Navy Blue*/
+  max-width:100%;
+}
+
+.makesmaller {
+  max-width: 480px;
+  max-height: 270px;
+  padding-bottom: 15px;
+}
