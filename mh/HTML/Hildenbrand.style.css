@@ -1,0 +1,429 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+  height: 101%;
+}
+
+* {
+color: black;
+}
+
+.header, .footer, .contactfooter {
+  padding: 30px 0; 
+  background-color: #D9D9D9;
+}
+.header {
+height: 105px;
+}
+
+.footer {
+height: 80px;
+}
+
+.contactfooter {
+height: 80px;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+}
+
+.header h1 {
+  color: #3B5598;
+  margin: 0 0 30px;
+  font-size: 50px;
+  font-family: 'Miniver', cursive;
+}
+
+.header ul, .footer ul , .contactfooter ul{
+  padding: 0 20px;
+  margin: 0; 
+  list-style: none; 
+}
+
+.header li {
+  display: inline;
+  width: 100px;
+  text-align: center;
+  margin: 6px; 
+}
+
+.header li a {
+  color:#3B5598;
+}
+
+.header li.active a {
+  background-color: #3B5598;
+}
+
+.main {
+  margin-bottom: 30px; 
+  margin-top: 30px;
+ } 
+
+.thumbnail {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+ } 
+
+.thumbnail img {
+  object-fit: cover;
+  display: block; 
+  width: 400px; 
+  height: 400px;
+   }
+
+.thumbnail p{
+	   display: none;
+   }
+   
+ .thumbnail:hover p {
+	 display: block;
+	}
+   
+.thumbnail:hover {
+opacity: 0.5;
+}
+  
+.footer li , .contactfooter li{
+  display: inline;
+  margin-right: 40px;
+}
+
+.footer p, .contactfooter p {
+  margin: 0 30px 0 0;
+}
+
+.footer ul, .contactfooter ul {
+  padding: 0 20px; 
+  margin: 0;
+  list-style: none; 
+}
+
+.footer a, .footer p, .contactfooter a, .contactfooter p{
+  color: #3B5598;
+  padding: 0 10px;
+  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.resume {
+padding-left: 60px;
+padding-right: 60px;
+color: black;
+}
+
+.resume p {
+text-indent: 30px;
+}
+
+.project {
+margin-top: 30px;
+}
+
+.me {
+padding: 50px;
+padding-bottom: 50px;
+color: black;
+}
+
+.resumehead {
+text-align: center;
+font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+color: black;
+}
+
+.resume p {
+margin: 0 0 0 0;
+}
+
+.picme {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+} 
+
+.picme img {
+  width: 100%; 
+  object-fit: cover;
+  display: block; 
+  height: 550px;
+ }
+ 
+ .contact{
+ text-align: center;
+ }
+ 
+ .deckpic {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+  
+.deckpic img {
+  width: auto;
+  height: auto;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.project p {
+text-indent: 30px;
+}
+
+.deck  {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .deck img {
+ width: auto;
+ height: auto;
+ max-height: 500px;
+ max-width: 500px;
+ }
+ 
+ .topdeck  {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .topdeck img {
+ width: auto;
+ height: auto;
+ max-height: 400px;
+ max-width: 400px;
+ }
+ 
+ .deck1 {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .deck1 img {
+ width: auto;
+ height: auto;
+ max-height: 500px;
+ max-width: 400px;
+ }
+ 
+ .mediglo  {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .mediglo img {
+ width: auto;
+ height: auto;
+ max-height: 400px;
+ max-width: 400px;
+ }
+ 
+ .mediglo1 img {
+ padding-left: 180px;
+ width: auto;
+ height: auto;
+ max-height: 625px;
+ max-width: 625px;
+ }
+ 
+  .compound  {
+  padding: 80px;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .compound img {
+ width: auto;
+ height: auto;
+ max-height: 400px;
+ max-width: 600px;
+ }
+ 
+   .winch  {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .winch img {
+ width: auto;
+ height: auto;
+ max-height: 400px;
+ max-width: 400px;
+ }
+ 
+ .winch1 img {
+ padding-left: 150px;
+ width: auto;
+ height: auto;
+ max-height: 500px;
+ max-width: 500px;
+ }
+ 
+ .vehicle  {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .vehicle img {
+ width: auto;
+ height: auto;
+ max-height: 500px;
+ max-width: 400px;
+ }
+ 
+  .vehicle1  {
+   box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .vehicle1 img {
+ padding-left: 100px;
+ width: auto;
+ height: auto;
+ max-height: 300px;
+ max-width: 600px;
+ }
+ 
+  .bikeped  {
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .bikeped img {
+ padding-left: 125px;
+ width: auto;
+ height: auto;
+ max-height: 400px;
+ max-width: 700px;
+ }
+ 
+  .delivery  {
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .delivery img {
+ padding-left: 0px;
+ width: auto;
+ height: auto;
+ max-height: 400px;
+ max-width: 700px;
+ }
+ 
+ .ntwdapp  {
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .ntwdapp img {
+ padding-left: 125px;
+ width: auto;
+ height: auto;
+ max-height: 600px;
+ max-width: 700px;
+ }
+ 
+  .world  {
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .world img {
+ width: auto;
+ height: auto;
+ max-height: 300px;
+ max-width: 500px;
+ }
+ 
+  .world1  {
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .world1 img {
+ width: auto;
+ height: auto;
+ max-height: 300px;
+ max-width: 600px;
+ }
+ 
+ .chandelier  {
+  padding: 0;
+  box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+  border-radius:0px;
+  border:0px;
+  }
+ 
+ .chandelier img {
+ width: auto;
+ height: auto;
+ max-height: 700px;
+ max-width: 500px;
+ }
+ 
+ .projects a {
+ color: black;
+ }
+ 
+ .row {
+ padding-bottom: 20px;
+ }
+ 
+ p a:hover {
+ color: #CC0000;
+ }
+ 
+ p a {
+ color: #3B5998;
+ }
+ 
+ h4 {
+ color: #3B5998;
+ font-weight: bold;
+ }
+ 
+ h5 {
+ color: #CC0000;
+ font-weight: bold;
+ }
+ 
+ .main h4 {
+	 color: black;
+	 font-weight: 400;
+ }
+ 
+ .top{
+	color: #3B5598;
+	font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+ }
+ 
+ .contact a {
+	 color: #3B5598;
+ }
+ 
