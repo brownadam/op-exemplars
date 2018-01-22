@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Gustavo Silvera | About</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" type="image/png" href="images/icons/gooseicon.png">
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<style>
+			.Shinybutton {
+			    background-color: #ffffff;
+			    width: 8em;
+			    -webkit-transition-duration: 0.4s; /* Safari */
+			    transition-duration: 0.4s;
+			}
+
+			.Shinybutton:after {
+			    width: 8em;
+			    height: 8em;
+			    background: #90EE90;
+			    position: absolute;
+			    opacity: 0;
+			    transition: all 0.8s
+			}
+
+			.Shinybutton:active:after {
+			    opacity: 1;
+			    transition: 0s
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+		</script>
+	</head>
+	<body id="top">
+		<script>
+		//website fade out and in theoretically
+
+		jQuery('body').css('display','none');
+		jQuery(document).ready(function() {
+			jQuery('body').fadeIn();
+			jQuery('h').on('click',function(event){
+				var thetarget = this.getAttribute('target')
+				if (thetarget != "_blank"){
+					var thehref = this.getAttribute('href')
+					event.preventDefault();
+					jQuery('body').fadeOut(function(){
+						//alert(thehref)
+						window.location = thehref
+					});
+				}
+			});
+		});
+		setTimeout(function(){
+			jQuery('body').fadeIn();
+		},1000)
+		</script>
+		<!--<img src="images/toronto.jpg" id="bg" alt="">BACKGROUND-->
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="home.html">Silvera</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="#"style = "color: #3366ff;">About Me</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="resume.html">Resumé</a></li>
+						<li><a href="contact.html">Contact Me</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+				<header class="major">
+					<h3>meet</h3>
+					<h2>Gustavo Silvera</h2>
+						<h3 id="cooltext">
+							<i>
+								<a href="#student">Student</a>
+								<a href="#engineer">Engineer</a>
+								<a href="#athlete">Athlete</a>
+							<!--	<a href="#leader">Leader</a>   ehh idk what to put here???-->
+							</i>
+						</h3>
+				</header>
+				<div class="container">
+					<div id="student">
+						<p id="cooltext" style="font-size:5em;">Student</p>
+						<div class="row">
+							<div class="4u">
+							<!--	<section>
+									<h3>Quick Note</h3>
+									<p>In the <i>offline world</i>, which some call the "real world", I'm a Junior in High School, interested in Computer Science/Engineering, . </p>
+								</section>-->
+								<section>
+									<!--<h3>Fancy Suit</h3>-->
+									<img class="image fit"src = "images/me/me suit edited.JPG" style = "width:20em; margin-bottom: 5em"/>
+								</section>
+							</div>
+							<div class="8u skel-cell-important">
+								<section>
+									<!--<h2>About Me</h2>-->
+									<p>
+										&nbsp;&nbsp;<i id="introtext">My formal education began</i> in Canada, where I spent the first 12 years of my life until moving to California. I lived near Toronto where I was born and raised, and here I completed most of my elementary studies. My interests in technology was sparked during this time, especially with my <i>technology oriented</i> family.
+									</p>
+									<p>
+										&nbsp;&nbsp;<i id="introtext">Three years later, I'm now studying as </i> a junior in Dublin High. Through my education, my informal goal is to improve the world through improvements in technology, specifically Computer Science. Here at Dublin High I am taking many CS oriented classes, and invest heavily in mathematics and science. For instance, this year I am taking AP Computer Science Applications, as well as doubling in AP Calculus AB, and AP Statistics. Every year at Dublin high has been heavily concentrated in the rigorous STEM fields, and every year I've taken the most prestigious engineering courses.
+									</p>
+								<!--	<p>
+										&nbsp;&nbsp;<i id="introtext">My High school education</i> started in Dublin High. For the last 3 years, not only have I succesfully graduated with straight A's and >= 4.0 GPA, but am also learning much in my college level classes. During my Freshman and Sophomore year at Dublin High, I worked with a team of friends to build and program a device that would dispense pills depending on the time of day inputted by the user. I also created a website for our product — DoseMaster. Experiences such as these, such as in the Varsity tennis team, and robotics, gave me invaluable experiences for teamwork and problem solving. In our DoseMaster project, we worked for days on finishing the code along with managing our time to complete the dispensary on time (and make improvements). On my tennis team I learned the importance of being on a team sport especially when someone lost and felt down, and how others would make an effort to rebuild their self confidence. In robotics, through stressful competitions, time constraints, problem solving, and working as a team, I have grown more adept to solving problems such as those involving efficiency, optimization, and strategies.
+									</p>
+								<!--	<p>
+										&nbsp;&nbsp; <i id="introtext">Hi there</i> My interest in Robotics, Computer Science, and mathematics have aided me tremendously in preparing for my ideal career, an engineer at Tesla or Google. The many personal projects I'm working on are introducing me to the world of startups and inventions, which I could very much get used to.
+									</p>-->
+									<p>
+										&nbsp;&nbsp; <i id="introtext">Much of my introduction and inspiration</i> in pursuing technology comes from my projects and classes. I have lots of experience with website building, VEX robotics engineering, and C++ game development. I have many personal projects that use the Cinder C++ graphical library, and have many years of experience with this program. I am also now a Varsity tennis player on my high school team. I have had brief experience helping children play tennis, mostly in small groups of young (ages ~10). In my robotics team, we have won several awards and qualified to states. My primary role is to program the robot and design mechanisms, but I often participate in the building process. My team and I also designed and prototyped a device to dispense medications at a certain time. This project, DoseMaster, won first place in the Alameda County Science Fair and also won the "Build award" at the school's local engineering fair.
+									</p>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">Most of my free time consists of </i>project building and tennis. My most advanced project so far is a two dimensional fully Cinder C++ built simulation of the VEX robotics game: "In the Zone". This simulation has fully integrated and optimized physics built in and many other features such as an autonomous enemy robot and re-run code parser and producer. I have also had experience with technology assistance in my own high school. During our lunch and prep periods, I am stationed in the main library helping other students in the school with technology related issues.
+									</p>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div id="engineer" style="margin-top:5em; /*keeps scrolling gud*/">
+						<p id="cooltext"  style="font-size:5em;">Engineer</p>
+						<div class="row">
+							<div class="8u skel-cell-important">
+								<section>
+									<!--<h2>About Me</h2>-->
+									<p>
+										&nbsp;&nbsp; <i id="introtext">Some of my work includes</i> robotics code, including velocity measurers and PID (Proportional Integral Derivative) controllers, as well as some other personal projects. Those include --but are not limited to-- my tennis simulation, this website, other basic games, and most importantly, my new 2017 Robotics simulation. Although I won't go too in depth of my crown jewel right now, further information can be found in my projects page or <a href="projects.html">here</a>. Anyways, I invest many hours during the week for my own personal projects which is really where I spend most of my free time now. This may sound tedious and turning to some, but I truly enjoy further developing my little projects and making them something larger. For example, my entire Simulation has been publicly available on GitHub for the past few months, and I have never had a week without thinking about it or working on it since. Most of my smaller projects I would give up on, and would halt the progress, since I must've found something better. However, my Vex robotics simulation and tennis simulations have been worked on so much that I can actually develop them to real world applications that include machine learning, two dimensional physics, and graphics design. All this is mostly what I spend my time on, and I am always proud of my work and progress.
+									</p>
+									<p>
+										&nbsp;&nbsp;<i id="introtext">I began my robotics career</i> in Freshman year, when I joined the Dublin High Robotics club. Although I was already interested in Computer Science and software development, I hadn't yet put those skills to use realistically. At the end of Freshman year I was quickly admitted into the main competition teams, competing in the VEX "Starstruck" game of 2016. This was 5327D. Our team consisted of myself and seven other members who have been long lasting friends ever since. My primary role on 5327D was the lead programmer, ensuring the autonomous period and driver controls worked perfectly and efficiently. Our robot was initially extremely successful as we frequently made it to finalists and even were tourney champs for a few of the tournaments we attended. We won several awards but our primary focus was on having the best robot and winning. 5327D, along with most of the other Gael Force teams qualified to the Vex states championships for north California, however we stopped there and did not advance to worlds.									</p>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">This year I am on another robotics team</i>, 5327C, led by one of my peers, and a good friend from my last team, Christy K. Since day one, we've been hard at work designing the best robot for the new VEX game "In the Zone", and now being an "elder" I was able to take more part in the team's inner decisions and major changes. Similarly to my last team I was lead software developer and it was my responsibility to get the robot working exactly as the driver would want, and make sure the autonomous portion of the match would be effective and reliable. I also dabble in the video production of our team, website design, notebook records, and external projects. So far our team was the first 5327 team of five to qualify to states through the most prestigious Bellarmine Excellence award given to the "best robot in the competition", in terms of design, presentation, numbers, and ability. I can honestly take quite a bit of credit for the award since the judges were awed by some of the external projects I demonstrated and will further delineate below.
+
+									</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+									<!--<h3>Fancy Suit</h3>-->
+									<img class="image fit"src = "images/me/meSmort.jpg" style = "width:20em; margin-bottom: 5em"/>
+									<img class="image fit"src = "images/projects/InTheZoneSim.png" style = "width:20em; margin-bottom: 5em"/>
+									<img class="image fit"src = "images/projects/roboD.PNG" style = "width:20em; margin-bottom: 5em"/>
+
+
+								</section>
+							</div>
+						</div>
+					</div>
+					<div id="athlete" style="margin-top:5em; /*keeps scrolling gud*/">
+						<p id="cooltext"  style="font-size:5em;">Athlete</p>
+						<div class="row">
+							<div class="4u">
+								<section>
+									<!--<h3>Fancy Suit</h3>-->
+									<video class = "image fit" id="tennisVid" autoplay loop>
+										<source src="images\me\tennis.mp4" type="video/mp4" />
+									</video></center>
+									<script>setTimeout(function(){document.getElementById('tennisVid').play();},1000);</script>
+									<img class="image" src = "images/me/raquet.jpg" style = "width:22.2em;"/>
+								</section>
+							</div>
+							<div class="8u skel-cell-important">
+								<section>
+									<!--<h2>About Me</h2>-->
+									<p>
+										&nbsp;&nbsp; <i id="introtext">My interest in tennis</i> began approximately eight years ago. After moving from Canada, I continued my tennis classes and have only gotten better. For my entire stay at Dublin High, I've been in the boy's varsity tennis team, practicing at least twice a week, and usually playing five times a week. Even with my challenging schedule, I've had to adapt and compromise to sustain enough practice over the week, as well as a decent sleep schedule and academic status. Because of my challenging classes, I am just now getting the most homework I've ever gotten in my life (as would be expected), and have exams almost every week that I must constantly be studying for; Now more than ever have I learned how to manage my time wisely and never miss an assignment while still getting at least 7 hours of sleep. I learned that taking many advanced classes is not as simple as it sounds, and it takes a whole lot of dedication, effort, patience, and respect to succeed in those mentioned classes.
+									</p>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">I now play</i> at least once every three days, but sometimes have to make compromises due to workload. I've been on my high school's Varsity Tennis team since Freshman year, and am always practicing, improving, and pushing my limits. I now play in a small class at ClubSport that has helped me along the years ever since moving to California.
+									</p>
+								</section>
+							</div>
+						</div>
+					</div>
+<!--
+					<div id="leader">
+						<p id="cooltext" style="font-size:5em;">Leader</p>
+						<div class="row" >
+							<div class="4u">
+								<section>
+									<h3>Quick Note</h3>
+									<p>In the <i>offline world</i>, which some call the "real world", I'm a Junior in High School, interested in Computer Science/Engineering, . </p>
+								</section>
+								<section>
+									<!--<h3>Fancy Suit</h3>-----------
+									<img class="image fit"src = "images/me/me suit edited.JPG" style = "width:20em; margin-bottom: 5em"/>
+								</section>
+							</div>
+							<div class="8u skel-cell-important">
+								<section>
+									<!--<h2>About Me</h2>----------
+									<p>
+										&nbsp;&nbsp;<i id="introtext">My name is Gustavo Silvera,</i> I'm a Junior in Dublin High, and want to improve the world through innovations in technology, specifically Computer Science. My interest in Robotics, Computer Science, and mathematics have aided me tremendously in preparing for my ideal career, an engineer at Tesla or Google. The many personal projects I'm working on are introducing me to the world of startups and inventions, which I could very much get used to.
+									</p>
+									<p>
+										&nbsp;&nbsp;<i id="introtext">My High school education</i> started in Dublin High. For the last 3 years, not only have I succesfully graduated with straight A's and >= 4.0 GPA, but am also learning much in my college level classes. During my Freshman and Sophomore year at Dublin High, I worked with a team of friends to build and program a device that would dispense pills depending on the time of day inputted by the user. I also created a website for our product — DoseMaster. Experiences such as these, such as in the Varsity tennis team, and robotics, gave me invaluable experiences for teamwork and problem solving. In our DoseMaster project, we worked for days on finishing the code along with managing our time to complete the dispensary on time (and make improvements). On my tennis team I learned the importance of being on a team sport especially when someone lost and felt down, and how others would make an effort to rebuild their self confidence. In robotics, through stressful competitions, time constraints, problem solving, and working as a team, I have grown more adept to solving problems such as those involving efficiency, optimization, and strategies.
+									</p>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">My interest in tennis</i> began approximately eight years ago. After moving from Canada, I continued my tennis classes and have only gotten better. For my entire stay at Dublin High, I've been in the boy's varsity tennis team, practicing at least twice a week, and usualy playing five times a week. Even with my challenging schedule, I've had to adapt and compromise to sustain enough practice over the week, as well as a decent sleep schedula and academic status. Because of my challenging classes, I am just now getting the most homework I've ever gotten in my life (as would be expected), and have exams almost every week that I must constantly be studying for; Now more than ever have I learned how to manage my time wisely and never miss an assignment while still getting at least 7 hours of sleep. I learned that taking many advanced classes is not as simple as it sounds, and it takes a whole lot of dedication, effort, patience, and respect to succeed in those mentioned classes.
+									</p>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">Currently, I'm the lead software developer</i> of the robotics team: Gael Force 5327C. Although part of a specific team, I also help around with 5327A, 5327D, and 5327X, where our robotics community is always helping each other out. I'll also probably start playing tennis next year during the boy's Spring tennis season.
+									</p>
+									<p>
+										&nbsp;&nbsp;<i id="introtext"> In conclusion</i>, I am an adaptable, dependable, and respectful person who will always put it in my responsibility to get something done, well. I invite you to look at the rest of my website, if you have any questions, comments, or concerns please email me at gustavo.r.silvera@gmail.com. Thanks for stopping by, and have a good day.
+									</p>
+								</section>
+							</div>
+						</div>
+					</div>
+				-->
+					<hr class="major"></hr>
+					<div class="row">
+						<div class="4u">
+						</div>
+						<section>
+							<h3>Biological Information</h3>
+							<p>I'm a 16 year old male, born in Toronto, lived there for the first 12 years of my life, then moved away. My family is all Venezuelan and thus <i>yo también soy Venezolano</i>. Four years ago my family moved to North California, specifically the Bay area (near Silicon Valley and San Francisco), where I live now.</p>
+						</section>
+					</div>
+					<a href="#" class="image fit"><img src="images/places/places.gif" alt="" style "margin-top: 5em;"/></a>
+				</div>
+			</section>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container"  style = "background-color: #F5F5F">
+				<ul class="copyright">
+					<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+					<li>© 2018 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+					<li>© 2018 Silvera Industries, Inc. All rights reserved.</li>
+				</ul>
+				<center class="alt">
+				<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+				</center>
+			</div>
+		</footer>
+	</body>
+</html>

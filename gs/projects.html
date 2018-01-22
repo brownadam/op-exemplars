@@ -1,0 +1,711 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gustavo Silvera | Projects</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" type="image/png" href="images/icons/gooseicon.png">
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/animate.css">
+		</noscript>
+		<link rel="stylesheet"
+		  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+		  <!-- or -->
+		  <link rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<style>
+			.Shinybutton {
+			    background-color: #ffffff;
+			    width: 8em;
+			    -webkit-transition-duration: 0.4s; /* Safari */
+			    transition-duration: 0.4s;
+			}
+
+			.Shinybutton:after {
+			    width: 8em;
+			    height: 8em;
+			    background: #90EE90;
+			    position: absolute;
+			    opacity: 0;
+			    transition: all 0.8s
+			}
+
+			.Shinybutton:active:after {
+			    opacity: 1;
+			    transition: 0s
+			}
+			.viewpoint{/*what is diaplayed for the projects*/
+				position: absolute;/*lets them draw over each other*/
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
+			}
+			.nowshowing{
+				z-index: 100;/*at very front*/
+			}
+
+			.notshowing{
+				z-index: -100;/*at very back*/
+			}
+
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+		</script>
+	</head>
+	<body id="top">
+		<script>
+		//website fade out and in theoretically
+		jQuery('body').css('display','none');
+		jQuery(document).ready(function() {
+			jQuery('body').fadeIn();
+			jQuery('h').on('click',function(event){
+				var thetarget = this.getAttribute('target')
+				if (thetarget != "_blank"){
+					var thehref = this.getAttribute('href')
+					event.preventDefault();
+					jQuery('body').fadeOut(function(){
+						//alert(thehref)
+						window.location = thehref
+					});
+				}
+			});
+		});
+		setTimeout(function(){
+			jQuery('body').fadeIn();
+		},2000)
+
+		</script>
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="home.html">Silvera</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="personal.html">About Me</a></li>
+						<li><a href="#" style = "color: #3366ff;">Projects</a></li>
+						<li><a href="resume.html">Resumé</a></li>
+						<li><a href="contact.html">Contact Me</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+		<section id="one" class="wrapper style1">
+				<header class="major">
+					<h2>Projects Gallery</h2>
+					<p>Scroll down to see </p>
+				</header>
+				<!--projects picker-->
+					<div class="container">
+						<div class ="row"><!--CREATED ROW OF 3-->
+							<div class="4u" id = "InTheZoneSimBTN">
+								<a href = "#InTheZoneSim" style = "text-decoration: none; ">
+									<div class="button">
+										<section class="special box">
+											<center><video class = "image fit" id="simVid" autoplay loop>
+												<source src="images\projects\vids\simulationCROP.mp4" type="video/mp4" />
+											</video></center>
+											<script>setTimeout(function(){document.getElementById('simVid').play();},10);</script>
+											<h3 style = "color: #00C3FF">In the Zone Sim</h3>
+											<p>A fairly complex, 2 dimentional, fully C++ built, Vex robotics simulation. </p>
+										</section>
+									</div>
+								</a>
+							</div>
+							<div class="4u" id = "autenBTN">
+								<a href = "#auten" style = "text-decoration: none">
+									<div class="button">
+										<section class="special box">
+											<center><video class="image fit" id="autenVid" autoplay loop>
+												<source src="images/projects/vids/auten.mp4">
+												</video></center>
+												<script>setTimeout(function(){document.getElementById('autenVid').play();},10);</script>
+											<h3 style = "color: #00C3FF">Tennis Simulation</h3>
+											<p>Two fully automated tennis players, playing tirelessly forever. </p>
+										</section>
+									</div>
+								</a>
+							</div>
+						<div class="4u" id = "DoseMasterBTN">
+							<a href = "https://gustavosilvera.github.io/DoseMasterWeb/" style = "text-decoration: none">
+								<div class="button">
+									<section class="special box">
+										<center><img class="image fit" src="images/projects/dosemaster.jpg" style = " height: 75%"></center>
+										<h3 style = "color: #00C3FF">DoseMaster</h3>
+										<p>We built this contraption to prevent pill over-dosage and forgetfulness.</p>
+									</section>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="row"><!--CREATED ROW OF 3-->
+						<div class="4u" id = "5327DBTN">
+							<a href = "#5327d" style = "text-decoration: none">
+								<div class="button">
+									<section class="special box">
+										<center><img class="image fit" src="images/projects/roboD.PNG" style = " height: 75%"></center>
+										<h3 style = "color: #00C3FF">5327D Robot</h3>
+										<p>Our meta robot for last year's Vex StarStruck game. It was very OP. </p>
+									</section>
+								</div>
+							</a>
+						</div>
+						<div class="4u" id = "goosinatorBTN">
+							<a href = "#goosinator" style = "text-decoration: none">
+								<div class="button">
+									<section class="special box">
+										<center><img class="image fit" src="images\projects\realGoosinatorCROP.jpg" style = "  height: 75%"></center>
+										<h3 style = "color: #00C3FF">The Goosinator</h3>
+										<p>My personal rig housing a GTX 1070, I7 6700 @ 4Ghz, 16Gb DDR4 and more.</p>
+									</section>
+								</div>
+							</a>
+						</div>
+						<div class="4u" id = "macuariumBTN">
+							<a href = "#macuarium" style = "text-decoration: none">
+								<div class="button">
+									<section class="special box">
+										<center><video class="image fit" id="macVid" autoplay loop>
+											<source src="images/projects/vids/macuarium.mp4">
+											</video></center>
+											<script>setTimeout(function(){document.getElementById('macVid').play();},10);</script>
+										<h3 style = "color: #00C3FF">Macuarium</h3>
+										<p>Fun little side project with my pals, primarily built to advertise our tech club.</p>
+									</section>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="row"><!--CREATED ROW OF 3-->
+						<div class="4u" id = "truspeedBTN">
+							<a href = "#truspeed" style = "text-decoration: none">
+								<div class="button">
+									<section class="special box">
+										<center><img class="image fit" src="images/projects/codycodecode.1.png" style = " height: 75%"></center>
+										<h3 style = "color: #00C3FF">Vex TruSpeed Sim</h3>
+										<p>A simpler simulation showing logarithmic TruSpeed and an X-drive's controls.</p>
+									</section>
+								</div>
+							</a>
+						</div>
+						<div class="4u" id = "elevatorBTN">
+							<a href = "#elevator" style = "text-decoration: none">
+								<div class="button">
+									<section class="special box">
+										<center><img class="image fit" src="images\projects\dankElevator.JPG" style = " height: 75%; " ></center>
+										<h3 style = "color: #00C3FF">Elevator Mechanism</h3>
+										<p>A "custom elevator project" for last year's engineering principles class</p>
+									</section>
+								</div>
+							</a>
+						</div>
+						<div class="4u" id = "winchBTN">
+							<a href = "#winch" style = "text-decoration: none">
+								<div class="button">
+									<section class="special box">
+										<center><img class="image fit" src="images\projects\winch.gif" style = " height: 75%"></center>
+										<h3 style = "color: #00C3FF">NetLogo Winch</h3>
+										<p>Simulation of physical POE winch mechanism project. Here's just the code.</p>
+									</section>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</section>
+			<!--https://github.com/GustavoSilvera/Vex_2017_Simulation-->
+			<center>
+				<div id = "special" name = "special" class="content">
+					<div id = "pages" style = "position:relative;">
+				  		<div id = "InTheZoneSim" class = "animated viewpoint nowshowing" >
+							<header class="major" style="margin-top:5em;">
+								<h2>Vex Robotics In the Zone 2017 Simulation</h2>
+								<p>Dublin High Robotics Team 5327C - 2017/18</p>
+							</header>
+							<div class="container">
+								<div class="row">
+									<div class="8u">
+										<section>
+											<h2>Vex In the Zone 2017 Simulation</h2>
+											<a href="SimWeb.html">
+												<video id="simVidMain" autoplay loop style = "width: 100%;"><!--VERY GOOD KEEPS VID IN FIT-->
+													<source src="images\projects\vids\simulation.mp4" type="video/mp4" />
+												</video>
+												<script> setTimeout(function(){ document.getElementById('simVidMain').play(); },10);
+												</script>
+											</a>
+										</section>
+									</div>
+									<div class="4u">
+										<section>
+											<h3>Introduction</h3>
+											<p> Essentially this is a fully C++ built Vex robotics simulation making use of the open source Cinder C++ graphics libraries. There are currently 4 Simulations on this build, one demonstrating the potential of a complete PID (proportional integral derivative) loop, another showing my own truSpeed logarithmic remapping functions which can be found on desmos, another for the robot itself to calculate its own position and direction based off real world sensor values (not working as of this build), and the final is a COMPLETE vex 2017 "In the Zone" field simulation with real world physics and scaled gameplay with a goal of being able to test our real world autons and perhaps use machine learning to train itself and create its own.</p>
+											<ul class="actions">
+												<li><a href="SimWeb.html" class="button alt">Learn more and install here</a></li>
+												<li><a href="https://github.com/GustavoSilvera/Vex_2017_Simulation" class="button alt">Check it out on Github</a></li>
+											</ul>
+										</section>
+									</div>
+								</div>
+							</div>
+							<footer id="footer">
+								<div class="container"  style = "background-color: #F5F5F">
+									<ul class="copyright">
+										<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+										<li>© 2016 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+										<li>© 2016 Silvera Industries, Inc. All rights reserved.</li>
+									</ul>
+									<center class="alt">
+									<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+									</center>
+								</div>
+							</footer>
+						</div>
+						<div id = "truspeed" class = "animated fadeOut viewpoint notshowing">
+							<header class="major"style="margin-top:5em; /*keeps scrolling gud*/">
+								<h2>Vex robotics truspeed simulation</h2>
+								<p>Dublin High team 5327D - 2016/17</p>
+							</header>
+							<div class="container">
+								<div class="row">
+									<div class="8u">
+										<section>
+											<h2>X Drive Simulation</h2>
+											<a href="" class="image fit"><img src="images/projects/simysimsim.1.png" style="width:30em" /></a>
+											<a href="" class="image fit"><img src="images/projects/codycodecode.1.png" style="width:45em" /></a>
+										</section>
+									</div>
+									<div class="4u">
+										<section>
+											<h3>Introduction</h3>
+											<p>The images to the left are screenshots of a simulation that I created during my time with the Dublin High 5327D robotics team. The code below is a sample of this open source project I have worked on that demonstrates the differences of a linear acceleration of the wheels in an XDrive versus a logarithmic function that will accelerate based off the type of function. </p>
+											<ul class="actions">
+												<li><a href="#" class="button alt">Learn More</a></li>
+											</ul>
+										</section>
+										<section>
+											<h3>
+												Overview
+											</h3>
+											<p>
+												Overall, the judges very much liked my simulation, and we continued building on it and updating it. The end result gave me the ability to introduce and further explain the concept of truSpeed as well as provide answers to problems and questions we had ourselves while developing this robot. We discovered that along with a more realistic drive (like an actual automobile), the truSpeed functions I wrote provided better precision and accuracy for the controls. With a cubic function we were able to have a dead zone of about 20 units, which proved incredibly useful because our controller was not perfect and after some wear and tear the joystick began to give improper readings. However, we also were able to stop unnecessary strafing that was presented with the false values of the old controller, and we got the robot to be most efficient for moving in all directions, as well as turning and accelerating.
+											</p>
+										</section>
+									</div>
+								</div>
+							</div>
+							<footer id="footer">
+								<div class="container"  style = "background-color: #F5F5F">
+									<ul class="copyright">
+										<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+										<li>© 2016 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+										<li>© 2016 Silvera Industries, Inc. All rights reserved.</li>
+									</ul>
+									<center class="alt">
+									<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+									</center>
+								</div>
+							</footer>
+						</div>
+						<div id = "5327d" class = "animated fadeOut viewpoint notshowing">
+							<header class="major"style="margin-top:5em; /*keeps scrolling gud*/">
+								<h2>Team 5327D Robot</h2>
+								<p>Dublin High team 5327D - 2016/17</p>
+							</header>
+							<div class="container">
+								<div class="row">
+									<div class="8u">
+										<section>
+											<h2>Our robot</h2>
+											<a href="" class="image fit"><img src="images/projects/roboD.PNG" style="width:30em" /></a>
+											<a href="" class="image fit">
+												<video id="robotMain" autoplay loop>
+													<source src="images\projects\vids\robotd.mp4" type="video/mp4" />
+												</video>
+												<script> setTimeout(function(){ document.getElementById('robotMain').play(); },10);
+												</script>
+											</a>
+										</section>
+									</div>
+									<div class="4u">
+										<section>
+											<h3>
+												Overview
+											</h3>
+											<p>
+ 											   I began my robotics career in Freshman year, when I joined the Dublin High Robotics club. Although I was already interested in Computer Science and software development, I hadn't yet put those skills to use realistically. At the end of Freshman year I was quickly admitted into the main competition teams, competing in the VEX "Starstruck" game of 2016. This was 5327D. Our team consisted of myself and seven other members who have been long lasting friends ever since. My primary role on 5327D was the lead programmer, ensuring the autonomous period and driver controls worked perfectly and efficiently. Our robot was initially extremely successful as we frequently made it to finalists and even were tourney champs for a few of the tournaments we attended. We won several awards but our primary focus was on having the best robot and winning. 5327D, along with most of the other Gael Force teams qualified to the Vex states championships for north California, however we stopped there and did not advance to worlds.
+    										</p>
+										</section>
+									</div>
+								</div>
+							</div>
+							<footer id="footer">
+								<div class="container"  style = "background-color: #F5F5F">
+									<ul class="copyright">
+										<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+										<li>© 2016 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+										<li>© 2016 Silvera Industries, Inc. All rights reserved.</li>
+									</ul>
+									<center class="alt">
+									<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+									</center>
+								</div>
+							</footer>
+						</div>
+						<div id = "auten" class = "animated fadeOut viewpoint notshowing">
+							<header class="major"style="margin-top:5em; /*keeps scrolling gud*/">
+								<h2>Cinder C++ Tennis Simulation</h2>
+								<p>Gustavo Silvera - 2016/17</p>
+							</header>
+							<div class="container">
+								<div class="row">
+									<div class="8u">
+										<section>
+											<h2>Automated Tennis players</h2>
+											<a href="" class="image fit">
+												<video id="autenVidMain" autoplay loop>
+													<source src="images\projects\vids\auten.mp4" type="video/mp4" />
+												</video>
+												<script> setTimeout(function(){ document.getElementById('autenVidMain').play(); },10);
+												</script>
+											</a>
+										</section>
+									</div>
+									<div class="4u">
+										<section>
+											<h3>Introduction</h3>
+											<p>This project was my introductory project into the Cinder C++ open source graphical library. Eventually it grew from a simple 1v1 tennis game, to having completely automated computer tennis players that are "learning" how to play the game themselves. As of right now they aren't very good at the game, but with further knowledge on machine learning, I can soon implement a method in which the players will learn from their mistakes and change their playing style accordingly </p>
+										<ul class="actions">
+												<li><a href="https://github.com/GustavoSilvera/TennisSimulation" class="See it on Github">Learn More</a></li>
+											</ul>
+										</section>
+										<hr/>
+									</div>
+								</div>
+							</div>
+							<footer id="footer">
+								<div class="container"  style = "background-color: #F5F5F">
+									<ul class="copyright">
+										<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+										<li>© 2016 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+										<li>© 2016 Silvera Industries, Inc. All rights reserved.</li>
+									</ul>
+									<center class="alt">
+									<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+									</center>
+								</div>
+							</footer>
+						</div>
+						<div id = "goosinator" class = "animated fadeOut viewpoint notshowing">
+							<header class="major"style="margin-top:5em; /*keeps scrolling gud*/">
+								<h2>The Goosinator</h2>
+								<p>Great Price per Frame</p>
+							</header>
+							<div class="container">
+								<div class="row">
+									<div class="8u">
+										<section>
+											<h2>I present to you</h2>
+											<a href="#" class="image fit"><img src="images/projects/realGoosinator.jpg" alt="" /></a>
+											<p>This computer has been planned out multiple years in advance, and I've been waiting for the opportune moment until most of the component's prices were at their lowest, yet much a bargain. Housing a top of the line Nvidia graphics card, a high end intel i7 CPU, a decent amount of ram, good storage quantity, and a 650 watt power supply. My tri monitor setup is extremely useful for programming large projects such as my simulation, editing large video projects for school and other means, and gaming with a much wider field of view. I play a few games every now and then, but receently most of my gaming activities are actually developing them, primarily my Vex Simulation is what I do now in my free time. </p>
+										</section>
+									</div>
+									<div class="4u">
+										<section>
+											<h3>Introduction</h3>
+											<p>This is the Goosinator. It is a 650Watt powerhungry computing beast, used for computaitonal analysis, development, video editing, gaming, and much more. My Corsair chassis houses a GTX 1070, intel i7 6700 quad core CPU, 16GB or ram, 1TB SSD, and 4TB HDD of storage. My current setup has the Goosinator driving a tri monitor setup; two 4K Samsung monitors, and a 1440p dell monitor. This monitor real estate is a godsend for programming, gaming, and video editing.</p>
+											<ul class="actions">
+												<li><a href="#" class="button alt">Learn More</a></li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h3>
+												What I use it for:
+											</h3>
+											<ul class="alt">
+												<li><a href="https://libcinder.org/">Cinder C++ development</a></li>
+												<li><a href="https://www.blackmagicdesign.com/products/davinciresolve/">Davinci Resolve</a></li>
+												<li><a href="https://www.unrealengine.com/en-US/what-is-unreal-engine-4">Unreal Engine 4</a></li>
+												<li>And now for the games...</li>
+												<li><a href="https://www.battlefield.com/">Battlefield 1</a></li>
+												<li><a href="https://www.battlefield.com/games/battlefield-4">Battlefield 4</a></li>
+												<li><a href="http://thewitcher.com/en/witcher3">Witcher 3</a></li>
+												<li><a href="https://www.batmanarkhamknight.com/">Batman Arkham Knight</a></li>
+											</ul>
+										</section>
+									</div>
+								</div>
+							</div>
+							<footer id="footer">
+								<div class="container"  style = "background-color: #F5F5F">
+									<ul class="copyright">
+										<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+										<li>© 2016 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+										<li>© 2016 Silvera Industries, Inc. All rights reserved.</li>
+									</ul>
+									<center class="alt">
+									<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+									</center>
+								</div>
+							</footer>
+						</div>
+						<div id = "elevator" class = "animated fadeOut viewpoint notshowing">
+							<header class="major"style="margin-top:5em; /*keeps scrolling gud*/">
+								<h2>Elevator Project</h2>
+								<p>Principles of Engineering - 2017</p>
+							</header>
+							<div class="container">
+								<div class="row">
+									<div class="8u">
+										<section>
+											<h2>Project 3.2.</h2>
+											<a href = "#" class="image fit"><img src="images/projects/elevator.JPG" style="width:40em" /></a>
+										</section>
+									</div>
+									<div class="4u">
+										<section>
+											<h3>Introduction</h3>
+											<p>The image to the left is the complete finished product of out elevator project. I was teamed with Michael Lee, Franklin Fitzpatrick, and Zachary Rowen. We each contributed to this project in our own way but my task was primarily building. As you can see it is built completely using Vex robotics parts, and was also programmed using the robotc code with an implementation of a PID loop for keeping the elevator at its specific level, along with distance based acceleration. <p>
+											<ul class="actions">
+												<li><a href="https://drive.google.com/file/d/0B8NOuqjnHrS7QXduWVdDbERaVjg/view?usp=sharing" class="button alt">Look at our RobotC code!</a></li>
+											</ul>
+										</section>
+										<hr />
+										<section>
+											<h3>
+												Overview
+											</h3>
+											   <p>Our task was simply to create a mechanism that would be able to transport people across different height levels in a building, using a cost efficient, and safe design. For our solution, we created an elevator that uses motor powered gears to climb up toothed beams along the sides of the walls. The motor powers the driver gears, which is in turn interlocked with an adjacent gear. The opposite turn of both of the gears directs the elevator upwards, or downwards, depending on the direction of the motor. Toothed beams line the sides of the walls, providing a track for the elevator to move up and down upon. Three buttons direct the movement of the elevator, and if a button is pressed, the elevator will move to its corresponding floor value. We have included a vex potentiometer sensor to read precise measurements for axle rotation and which is useful for determining elevator speed and current location. </p>
+												<p>For more information regarding this project, take a look at our <a href = "https://docs.google.com/document/d/1gMPla2g62oKKBQY_JnZjCvlyWGKE4NsODmDjnn8t3Zc/edit?usp=sharing">Documentation</a></p>
+												<p><a href = "https://docs.google.com/document/d/168HpwzyYF5ydNp3zTXBLWcDdb06UBwT0Y3VIRcTRVQE/edit">Principles of Engineering 2017 — Rubric</a></p>
+										</section>
+									</div>
+								</div>
+							</div>
+							<footer id="footer">
+								<div class="container"  style = "background-color: #F5F5F">
+									<ul class="copyright">
+										<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+										<li>© 2016 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+										<li>© 2016 Silvera Industries, Inc. All rights reserved.</li>
+									</ul>
+									<center class="alt">
+									<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+									</center>
+								</div>
+							</footer>
+						</div>
+						<div id = "winch" class = "animated fadeOut viewpoint notshowing">
+								<header class="major"style="margin-top:5em; /*keeps scrolling gud*/">
+									<h2>Mechanical Winch</h2>
+									<p>Principles of Engineering - 2016</p>
+								</header>
+								<div class="container">
+									<div class="row">
+										<div class="8u">
+											<section>
+												<h2>Project 1.2.5</h2>
+												<a href="#" class="image fit"><img src="images/projects/winch.gif" style="width:40em" /></a>
+											</section>
+										</div>
+										<div class="4u">
+											<section>
+												<h3>Introduction</h3>
+												<p>The image to the left is the code that my team and I wrote for having a simulation for the winch device that we built. With my code here, we were able to simulate the winch with alternating variables such as the size and weight of the object, along with the input power being given to the winch. The goal for this project was to be able to determine the most optimal position and placement for our real life. </p>
+												<ul class="actions">
+													<li><a href="https://drive.google.com/open?id=0B8NOuqjnHrS7U1ZCUzUyR2EwLWM" class="button alt">Try it out!</a></li>
+												</ul>
+											</section>
+
+											<section>
+												<h3>
+													Overview
+												</h3>
+												   <p>Our final prototype uses one Fischer Tek motor to power the mechanical winch. The motor is connected to a gearbox geared for speed, which in turn rotates an axle with a large gear. A smaller gear is meshed with the larger gear at a right angle in order to transform the horizontal rotational motion to vertical rotational motion. To stabilize the axle, we placed two pillars on either side of the motor. Our prototype lifted 180g of weight (1.764N) up 30cm (0.3m) in 5.82 seconds. The circuit drew 0.3A and had a voltage of 7.65V. The work done was 1.764N * 0.3m = 0.5292Joules. The output power was 0.5292 Joules/5.82 seconds = 0.091watts, and the input power was 0.30A*7.65V=2.295watts, making the efficiency 0.091 watts / 2.295 watts * 100%=4.0%. </p>
+													<br>
+													<p>Here is a revised copy of <a href = "https://drive.google.com/open?id=1_fr_7i2i0gJA6aE9H-Jf9sf5zY8KutulIshP4MtVdO0">Documentation</a></p>
+													<p>And a copy of our <a href = "https://docs.google.com/document/d/1YPSHbHJDdQWMF1z_ZGNBmi5gQg2ijFRwG-ueHCRuB8k/edit?usp=sharing">Rubric</a></p>
+											</section>
+										</div>
+									</div>
+								</div>
+								<footer id="footer">
+									<div class="container"  style = "background-color: #F5F5F">
+										<ul class="copyright">
+											<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+											<li>© 2018 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+											<li>© 2018 Silvera Industries, Inc. All rights reserved.</li>
+										</ul>
+										<center class="alt">
+										<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+										</center>
+									</div>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</center>
+			<script>
+				/*NOTshowing and NOWshowing used to control z index and keep things in front*/
+				var goAway = 'fadeOut notshowing';
+				var comere = 'fadeIn nowshowing';
+				/*
+				var SIM = document.getEjlementById("InTheZoneSim");
+				var TRU = document.getElementById("truspeed");
+				var TENN = document.getElementById("auten");
+				var ELE = document.getElementById("elevator");
+				var WIN = document.getElementById("winch");
+				var GOO = document.getElementById("goosinator");
+				var ROB = document.getElementById("5327d");
+				var DM = document.getElementById("dosemaster");
+				var MAC = document.getElementById("macuarium");
+				*/
+
+
+				console.time('cache');
+				$('#InTheZoneSimBTN').on('click', function(){
+					$('#auten').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(comere).addClass(goAway );
+					$('#goosinator').removeClass(comere).addClass(goAway );
+					$('#5327d').removeClass(comere).addClass(goAway );
+					$('#truspeed').removeClass(comere).addClass(goAway );
+					$('#dosemaster').removeClass(comere).addClass(goAway );
+					$('#macuarium').removeClass(comere).addClass(goAway);
+					$('#InTheZoneSim').removeClass(goAway).addClass(comere);/*fades in this one*/
+				});
+				$('#truspeedBTN').on('click', function(){
+					$('#auten').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(comere).addClass(goAway );
+					$('#goosinator').removeClass(comere).addClass(goAway );
+					$('#5327d').removeClass(comere).addClass(goAway );
+					$('#InTheZoneSim').removeClass(comere).addClass(goAway );
+					$('#dosemaster').removeClass(comere).addClass(goAway );
+					$('#macuarium').removeClass(comere).addClass(goAway);
+					$('#truspeed').removeClass(goAway).addClass(comere);/*fades in this one*/
+				});
+				$('#autenBTN').on('click', function(){
+					$('#truspeed').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(comere).addClass(goAway );
+					$('#goosinator').removeClass(comere).addClass(goAway );
+					$('#5327d').removeClass(comere).addClass(goAway );
+					$('#InTheZoneSim').removeClass(comere).addClass(goAway );
+					$('#dosemaster').removeClass(comere).addClass(goAway );
+					$('#macuarium').removeClass(comere).addClass(goAway);
+					$('#auten').removeClass(goAway).addClass(comere);/*fades in this one*/
+				});
+
+				$('#elevatorBTN').on('click', function(){
+					$('#truspeed').removeClass(comere).addClass(goAway);
+					$('#auten').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(comere).addClass(goAway );
+					$('#goosinator').removeClass(comere).addClass(goAway );
+					$('#5327d').removeClass(comere).addClass(goAway );
+					$('#InTheZoneSim').removeClass(comere).addClass(goAway );
+					$('#dosemaster').removeClass(comere).addClass(goAway );
+					$('#macuarium').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(goAway).addClass(comere);/*fades in this one*/
+				});
+
+				$('#winchBTN').on('click', function(){
+					$('#truspeed').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(comere).addClass(goAway);
+					$('#auten').removeClass(comere).addClass(goAway );
+					$('#goosinator').removeClass(comere).addClass(goAway );
+					$('#5327d').removeClass(comere).addClass(goAway );
+					$('#InTheZoneSim').removeClass(comere).addClass(goAway );
+					$('#dosemaster').removeClass(comere).addClass(goAway );
+					$('#macuarium').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(goAway).addClass(comere);/*fades in this one*/
+				});
+
+				$('#goosinatorBTN').on('click', function(){
+					$('#truspeed').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(comere).addClass(goAway );
+					$('#auten').removeClass(comere).addClass(goAway );
+					$('#5327d').removeClass(comere).addClass(goAway );
+					$('#InTheZoneSim').removeClass(comere).addClass(goAway );
+					$('#dosemaster').removeClass(comere).addClass(goAway );
+					$('#macuarium').removeClass(comere).addClass(goAway);
+					$('#goosinator').removeClass(goAway).addClass(comere);/*fades in this one*/
+				});
+
+				$('#5327DBTN').on('click', function(){
+					$('#truspeed').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(comere).addClass(goAway );
+					$('#goosinator').removeClass(comere).addClass(goAway );
+					$('#auten').removeClass(comere).addClass(goAway );
+					$('#InTheZoneSim').removeClass(comere).addClass(goAway );
+					$('#dosemaster').removeClass(comere).addClass(goAway );
+					$('#macuarium').removeClass(comere).addClass(goAway);
+					$('#5327d').removeClass(goAway).addClass(comere);/*fades in this one*/
+				});
+				$('#DoseMasterBTN').on('click', function(){
+					$('#truspeed').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(comere).addClass(goAway );
+					$('#goosinator').removeClass(comere).addClass(goAway );
+					$('#5327d').removeClass(comere).addClass(goAway );
+					$('#InTheZoneSim').removeClass(comere).addClass(goAway );
+					$('#auten').removeClass(comere).addClass(goAway );
+					$('#macuarium').removeClass(comere).addClass(goAway);
+					$('#dosemaster').removeClass(goAway).addClass(comere);/*fades in this one*/
+
+				});
+				$('#macuariumBTN').on('click', function(){
+					$('#truspeed').removeClass(comere).addClass(goAway);
+					$('#elevator').removeClass(comere).addClass(goAway);
+					$('#winch').removeClass(comere).addClass(goAway );
+					$('#goosinator').removeClass(comere).addClass(goAway );
+					$('#5327d').removeClass(comere).addClass(goAway );
+					$('#InTheZoneSim').removeClass(comere).addClass(goAway );
+					$('#dosemaster').removeClass(comere).addClass(goAway );
+					$('#auten').removeClass(comere).addClass(goAway);
+					$('#macuarium').removeClass(goAway).addClass(comere);/*fades in this one*/
+
+				});
+				console.timeEnd('cache');
+			</script>
+<!--the footer is directly under the individual divs, so that they appear right under them with any size-->
+	</body>
+</html>

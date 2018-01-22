@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Gustavo Silvera | About</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" type="image/png" href="images/icons/gooseicon.png">
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<style>
+			.Shinybutton {
+			    background-color: #ffffff;
+			    width: 8em;
+			    -webkit-transition-duration: 0.4s; /* Safari */
+			    transition-duration: 0.4s;
+			}
+
+			.Shinybutton:after {
+			    width: 8em;
+			    height: 8em;
+			    background: #90EE90;
+			    position: absolute;
+			    opacity: 0;
+			    transition: all 0.8s
+			}
+
+			.Shinybutton:active:after {
+			    opacity: 1;
+			    transition: 0s
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+		</script>
+	</head>
+	<body id="top">
+		<script>
+		//website fade out and in theoretically
+
+		jQuery('body').css('display','none');
+		jQuery(document).ready(function() {
+			jQuery('body').fadeIn();
+			jQuery('h').on('click',function(event){
+				var thetarget = this.getAttribute('target')
+				if (thetarget != "_blank"){
+					var thehref = this.getAttribute('href')
+					event.preventDefault();
+					jQuery('body').fadeOut(function(){
+						//alert(thehref)
+						window.location = thehref
+					});
+				}
+			});
+		});
+		setTimeout(function(){
+			jQuery('body').fadeIn();
+		},1000)
+		</script>
+		<!--<img src="images/toronto.jpg" id="bg" alt="">BACKGROUND-->
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="home.html">Silvera</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="#"style = "color: #3366ff;">About Me</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="resume.html">Resumé</a></li>
+						<li><a href="contact.html">Contact Me</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper style1" style="background-color: #000">
+				<header class="major">
+					<h3>2017-2018 5327C</h3>
+					<h2>Vex "In The Zone" Simulation</h2>
+						<h3 id="cooltext">
+							<i>
+								<a href="#windows">Install on Windows</a>
+								<a href="#macos">Install on OSX</a>
+							<!--	<a href="#leader">Leader</a>   ehh idk what to put here???-->
+							</i>
+						</h3>
+				</header>
+				<!--cool video playing here-->
+				<center>
+					<video id="simVidMain" autoplay loop>
+						<source src="images\projects\vids\simulation.mp4" type="video/mp4" />
+					</video>
+					<script> setTimeout(function(){ document.getElementById('simVidMain').play(); },1);
+					</script>
+				</center>
+				<div class="container">
+					<div id="windows" style="margin-top:5em; /*keeps scrolling gud*/">
+						<p id="cooltext" style="font-size:5em;">Windows Install</p>
+						<div class="row">
+							<div class="4u">
+							<!--	<section>
+									<h3>Quick Note</h3>
+									<p>In the <i>offline world</i>, which some call the "real world", I'm a Junior in High School, interested in Computer Science/Engineering, . </p>
+								</section>-->
+								<section>
+									<!--<h3>Fancy Suit</h3>-->
+								</section>
+							</div>
+							<div class="8u skel-cell-important">
+								<section>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">If you just want to check out the finished product</i> and see it in action, simply download the folder from <a href = "https://drive.google.com/open?id=1UPgbnpAZwdm7Mnx-tHnlVnq8GOhpX63t">HERE</a>. Make sure all contents of the folder are installed or else the program will not start. Once downloaded, simply run the .exe file and you should be ready to go.
+									</p>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">To build, we'll need to install Cinder C++.</i> This is an open source C++ library that I'm using for graphics and other openGL functions. Specifically with this build you'll want to download Cinder 8.0 or above, but not the developmental 9.0.
+									</p>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div id="macos" style="margin-top:5em; /*keeps scrolling gud*/">
+						<p id="cooltext"  style="font-size:5em;">OSX install</p>
+						<div class="row">
+							<div class="8u skel-cell-important">
+								<section>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">If you just want to check out the finished product</i> and see it in action, like the Windows installation simply download the folder from <a href = "https://drive.google.com/open?id=0B8NOuqjnHrS7TDByTXpTNUJJd2s">HERE</a> instead. Make sure all contents of the folder are installed or else the program will not start. Once downloaded, simply run the application file and you should be ready to go.
+									</p>
+									<p>
+										&nbsp;&nbsp; <i id="introtext">To build, we'll need to install Cinder C++.</i> This is an open source C++ library that I'm using for graphics and other openGL functions. Specifically with this build you'll want to download Cinder 8.0 or above, but not the developmental 9.0.
+									</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section>
+
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container"  style = "background-color: #F5F5F">
+				<ul class="copyright">
+					<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+					<li>© 2018 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+					<li>© 2018 Silvera Industries, Inc. All rights reserved.</li>
+				</ul>
+				<center class="alt">
+				<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+				</center>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Gustavo Silvera | Resumé</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" type="image/png" href="images/icons/gooseicon.png">
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<style>
+			.Shinybutton {
+			    background-color: #ffffff;
+			    width: 8em;
+			    -webkit-transition-duration: 0.4s; /* Safari */
+			    transition-duration: 0.4s;
+			}
+
+			.Shinybutton:after {
+			    width: 8em;
+			    height: 8em;
+			    background: #90EE90;
+			    position: absolute;
+			    opacity: 0;
+			    transition: all 0.8s
+			}
+
+			.Shinybutton:active:after {
+			    opacity: 1;
+			    transition: 0s
+			}
+		</style>
+	</head>
+	<body id="top">
+		<script>
+		//website fade out and in theoretically
+
+		jQuery('body').css('display','none');
+		jQuery(document).ready(function() {
+			jQuery('body').fadeIn();
+			jQuery('a').on('click',function(event){
+				var thetarget = this.getAttribute('target')
+				if (thetarget != "_blank"){
+					var thehref = this.getAttribute('href')
+					event.preventDefault();
+					jQuery('body').fadeOut(function(){
+						//alert(thehref)
+						window.location = thehref
+					});
+				}
+			});
+		});
+		setTimeout(function(){
+			jQuery('body').fadeIn();
+		},1000)
+		</script>
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="home.html"> Silvera</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="personal.html">About Me</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="#" style = "color: #3366ff;">Resumé</a></li>
+						<li><a href="contact.html">Contact Me</a></li>
+					</ul>
+				</nav>
+			</header>
+		<!-- Main -->
+			<section id="main" class="wrapper style1" style = "background-color: #8DB2BD">
+				<center>
+					<p style = "font-size: 350%; color: BLACK">——————Resume——————</p>
+					<!--<p style = "font-size: 120%; color: WHITE">Download resume PDF <a href = "https://preview.c9users.io/gustavosilvera/website/Files/SilveraResume2017.pdf"> HERE</a></p>-->
+					<p style="font-size: 120%; color: WHITE">Download resume PDF <a href = "SilveraResume2017.pdf"> HERE</a></p>
+					<embed src="SilveraResume2017.pdf" width="800px" height="1100px" />
+				<!--<iframe src="https://docs.google.com/document/d/1-6axT-haDFezMhJVhS__GZFPqkjb6xT79YKlBz-woPQ/pub?embedded=true" width="900em" height="1400em" frameborder="0" marginheight="0" marginwidth="0"></iframe>-->
+				</center>
+			</section>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container"  style = "background-color: #F5F5F">
+				<ul class="copyright">
+					<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+					<li>© 2018 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+					<li>© 2018 Silvera Industries, Inc. All rights reserved.</li>
+				</ul>
+				<center class="alt">
+				<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+				</center>
+			</div>
+		</footer>
+	</body>
+</html>
+
+
+<!--RESUME TRESH https://docs.google.com/document/d/1-6axT-haDFezMhJVhS__GZFPqkjb6xT79YKlBz-woPQ/edit-->

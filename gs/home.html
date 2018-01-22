@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gustavo Silvera | Home</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" type="image/png" href="images/icons/gooseicon.png">
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<style type="text/css">a { text-decoration : none; color : inherit; }</style>
+		<style>
+
+			.Shinybutton {
+			    background-color: #ffffff;
+			    width: 8em;
+			    -webkit-transition-duration: 0.4s; /* Safari */
+			    transition-duration: 0.4s;
+			}
+
+			.Shinybutton:after {
+			    width: 8em;
+			    height: 8em;
+			    background: #90EE90;
+			    position: absolute;
+			    opacity: 0;
+			    transition: all 0.8s
+			}
+
+			.Shinybutton:active:after {
+			    opacity: 1;
+			    transition: 0s
+			}
+		</style>
+	</head>
+	<body id="top">
+		<script>
+		//website fade out and in theoretically
+
+		jQuery('body').css('display','none');
+		jQuery(document).ready(function() {
+			jQuery('body').fadeIn();
+			jQuery('a').on('click',function(event){
+				var thetarget = this.getAttribute('target')
+				if (thetarget != "_blank"){
+					var thehref = this.getAttribute('href')
+					event.preventDefault();
+					jQuery('body').fadeOut(function(){
+						//alert(thehref)
+						window.location = thehref
+					});
+				}
+			});
+		});
+		setTimeout(function(){
+			jQuery('body').fadeIn();
+		},2000)
+		</script>
+		<script>
+			var $root = $('html, body');
+					$('a').click(function() {
+					    $root.animate({
+					        scrollTop: $( $.attr(this, 'href') ).offset().top
+					    }, 500);
+					    return false;
+					});
+					/*for scrolling yet fixed header*/
+					var  mn = $(".main-nav");
+					    //mns = "main-nav-scrolled";
+					    //hdr = $('header').height();
+
+					$(window).scroll(function() {
+					  if( $(this).scrollTop() > window.innerHeight) {
+					    mn.addClass("main-nav-scrolled");
+					  } else {
+					    mn.removeClass("main-nav-scrolled");
+					  }
+					  console.log($(this).scrollTop());
+					  console.log(window.innerHeight );
+					});
+				</script>
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="home.html">Silvera</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="#" style = "color: #3366ff;">Home</a></li>
+						<li><a href="personal.html">About Me</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="resume.html">Resumé</a></li>
+						<li><a href="contact.html">Contact Me</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner" class = " torontoTheme">
+					<h2>Gustavo Silvera</h2>
+					<p style="font-size: 2em">	"The best way to predict the future is to invent it." <a href="home.html"> - Alan Kay</a></p>
+					<!--Memorization dosent last nearly as long as understanding - Gustavo Silvera 2017-->
+			</section>
+		<!-- One -->
+			<section id="one" class="wrapper style1">
+				<header class="major">
+					<h2>Nice to meet you</h2>
+					<p>Let me show you around. </p>
+				</header>
+				<div class="container">
+					<div class="row">
+						<div class="4u">
+							<a href = "projects.html">
+								<div class="button">
+									<section class="special box">
+										<img src="images\icons\projects.png" style = "height: 9em">
+										<!--<i class="icon fa-area-chart major"></i>-->
+										<h3>Projects</h3>
+										<p>Click here to find some of the many projects I have completed, or am still in the process of completing.</p>
+									</section>
+								</div>
+							</a>
+						</div>
+						<div class="4u">
+							<a href = "personal.html">
+								<div class="button">
+									<section class="special box">
+										<img src="images\icons\about.png" style="height: 9em";>
+										<h3>About Me</h3>
+										<p>Here you can read more about me, although my resume basically sums it up, I still have more detail here.</p>
+									</section>
+								</div>
+							</a>
+						</div>
+						<div class="4u">
+							<a href = "resume.html">
+								<div class="button">
+									<section class="special box">
+										<img src="images\icons\resume.png" style="height: 9em";>
+										<h3>Resumé</h3>
+										<p>Here's my most updated and recent resumé, as of currently November 26th, 2017. Downloads can be found.</p>
+									</section>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="banner" class = "MeTheme">
+				<div class="inner">
+					<h2>More Coming Soon 2018</h2>
+					<!--<p style="font-size: 2em">	"will work on this later, dont worry. " <a href="home.html"> - Goose</a></p>
+					<!--Memorization dosent last nearly as long as understanding - Gustavo Silvera 2017-->
+					<ul class="actions">
+						<!--
+						<li><a href="#content" class="button big special">Sign Up</a></li>
+						<li><a href="#elements" class="button big alt">Learn More</a></li>-->
+					</ul>
+				</div>
+			</section>
+		<!-- Footer -->
+		<center>
+			<footer id="footer">
+				<div class="container"  style = "background-color: #F5F5F">
+					<ul class="copyright">
+						<li>Contact: Gustavo Silvera  grs5382@gmail.com</li>
+						<li>© 2018 | Gustavo Silvera | Web Design by Silvera Industries.</li>
+						<li>© 2018 Silvera Industries, Inc. All rights reserved.</li>
+					</ul>
+					<center class="alt">
+					<a href = "mailto:gustavo.r.silvera@gmail.com" target="_top">Send Us Feedback</a>
+					</center>
+				</div>
+			</footer>
+		</center>
+
+	</body>
+</html>
