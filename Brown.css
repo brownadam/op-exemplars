@@ -11,6 +11,11 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: table;
 }
+
+img { 
+  max-width: 420px;
+  max-height: 420px;
+}
 @media screen and (max-width: 320px) {
   .table {
     display: block;
